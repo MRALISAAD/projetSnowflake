@@ -2,6 +2,34 @@ import streamlit as st
 import snowflake.connector
 import plotly.graph_objects as go 
 
+st.markdown(
+    """
+    <style>
+    .sidebar .sidebar-content {
+        background-color: #f0f2f6;
+    }
+    .sidebar .sidebar-content .block-container {
+        padding: 1rem;
+    }
+    .main .block-container {
+        padding: 2rem;
+    }
+    .stButton>button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .stButton>button:hover {
+        background-color: #45a049;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 def list_datawarehouses(conn):
     try:
